@@ -204,3 +204,9 @@ __marimo__/
 
 # dg CLI cache
 .dg/
+
+# local pipeline output
+data/
+
+# dg dev scratch state
+.tmp_dagster_home_*/
