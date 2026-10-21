@@ -1,4 +1,4 @@
-# Dagster Fintech Showcase
+# Dagster Market Data Pipeline
 
 An automated market-data pipeline built with [Dagster](https://dagster.io), running **24/7 on a free Oracle Cloud VM** with no laptop involved.
 
@@ -79,8 +79,8 @@ docs/
 Requirements: Python 3.9+, [uv](https://docs.astral.sh/uv/), git.
 
 ```bash
-git clone https://github.com/Sahaj7102/dagster-fintech-showcase.git
-cd dagster-fintech-showcase
+git clone https://github.com/Sahaj7102/dagster-market-data-pipeline.git
+cd dagster-market-data-pipeline
 uv sync
 uv run dg dev
 ```
@@ -94,8 +94,8 @@ Open http://localhost:3000. The schedule starts switched on. Click **Materialize
    ```bash
    sudo apt update && sudo apt install -y git curl
    curl -LsSf https://astral.sh/uv/install.sh | sh
-   git clone https://github.com/Sahaj7102/dagster-fintech-showcase.git
-   cd dagster-fintech-showcase && uv sync
+   git clone https://github.com/Sahaj7102/dagster-market-data-pipeline.git
+   cd dagster-market-data-pipeline && uv sync
    mkdir -p ~/dagster_home
    ```
 3. Create `/etc/systemd/system/dagster.service`:
@@ -107,7 +107,7 @@ Open http://localhost:3000. The schedule starts switched on. Click **Materialize
 
    [Service]
    User=ubuntu
-   WorkingDirectory=/home/ubuntu/dagster-fintech-showcase
+   WorkingDirectory=/home/ubuntu/dagster-market-data-pipeline
    Environment=DAGSTER_HOME=/home/ubuntu/dagster_home
    ExecStart=/home/ubuntu/.local/bin/uv run dg dev
    Restart=always
